@@ -11,11 +11,12 @@ export default class Home extends React.Component {
   
 
   componentDidMount() {
+
     this.refresh();
   }
 
   refresh(){
-    fetch('/api/digimon', {headers: {'token': localStorage.token}})
+    fetch('/api/digimon', { headers: {'Authorization': 'JWT ' + localStorage.token}})
     .then(r => r.json())
     .then(j => {
       this.setState({ digimon: j.digimon });

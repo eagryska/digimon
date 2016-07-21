@@ -18,6 +18,7 @@ export default class Login extends React.Component {
     fetch('/api/login', { method: 'post', body, headers: { 'Content-Type': 'application/json' } })
     .then(r => r.json())
     .then((r) => {
+        localStorage.clear();
         localStorage.setItem('token', r.token);
         browserHistory.push('/digimon');
     });
