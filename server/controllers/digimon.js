@@ -2,21 +2,20 @@
 
 import express from 'express';
 import Digimon from '../models/digimon';
+import passport from 'passport';
 const router = module.exports = express.Router();
+const auth = passport.authenticate('jwt', { session: false })
 
 // create
-router.post('/', (req, res) => {
-    console.log('post');
-    console.log(req);
+router.post('/', auth, (req, res) => {
   const digimon = new Digimon(req.body);
   digimon.save(() => {
-    console.log('digisaved', digimon);
     res.send({ digimon });
   });
 });
 
 // index
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
     Digimon.find( {}, (err, digimon) => {
         res.send({ digimon });
     });

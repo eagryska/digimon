@@ -20,8 +20,11 @@ export default () => (
         <ul className="nav navbar-nav">
         </ul>
         <ul className="nav navbar-nav navbar-right">
-          <li><Link to="/"><i className="fa fa-home fa-fw"></i> Home</Link></li>
+          <li><Link to="/"><i className="fa fa-home fa-fw"></i> Digi-dashboard</Link></li>
           <li><Link to="/digimon"><i className="fa fa-hashtag fa-fw"></i> Digimon</Link></li>
+          <li><Link to="/register"><i className="fa fa-hashtag fa-fw"></i> Digister</Link></li>
+          <li><Link to="/login"><i className="fa fa-hashtag fa-fw"></i> Log-digi-in</Link></li>
+
         </ul>
       </div>
     </div>

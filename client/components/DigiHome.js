@@ -15,7 +15,7 @@ export default class Home extends React.Component {
   }
 
   refresh(){
-    fetch('/api/digimon')
+    fetch('/api/digimon', {headers: {'token': localStorage.token}})
     .then(r => r.json())
     .then(j => {
       this.setState({ digimon: j.digimon });

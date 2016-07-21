@@ -31,9 +31,9 @@ export default class Create extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='row'>
         <h3>Digiator</h3>
-         <form>
+         <form className='col-xs-6'>
           <div className='form-group'>
             <label>Diginame</label>
             <input className='form-control' ref='name' type='text' />
