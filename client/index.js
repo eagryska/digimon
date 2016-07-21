@@ -1,7 +1,6 @@
 import App from './components/App';
 import Home from './components/Home';
-import About from './components/About';
-import Faq from './components/Faq';
+import DigiHome from './components/DigiHome'
 
 import React from 'react';
 import { render } from 'react-dom';
@@ -14,8 +13,9 @@ render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
-      <Route path="about" component={About} />
-      <Route path="faq" component={Faq} />
+    </Route>
+    <Route path="/Digimon" component={App}>
+      <IndexRoute component={DigiHome} />
     </Route>
   </Router>
   , document.getElementById('root'));

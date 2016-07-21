@@ -1,3 +1,9 @@
 import React from 'react';
 
-export default () => <h1>Home</h1>;
+export default (props) => {
+    return (
+       <div>
+        Home
+       </div>
+    );
+};

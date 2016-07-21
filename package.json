@@ -2,7 +2,8 @@
   "name": "digimon",
   "version": "1.0.3",
   "scripts": {
-    "dev": "DB=digimon-dev-db LEVEL=silly PORT=3333 nodemon --debug dst/server.js"
+    "dev": "DB=digimon-dev-db LEVEL=silly PORT=3333 nodemon --debug dst/server.js",
+    "start": "LEVEL=silly node dst/server.js"
   },
   "author": "Shawn and Evan",
   "license": "MIT",
